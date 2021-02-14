@@ -1,103 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Hello!</title>
-   
-  </head>
-  <body>
-    <nav>
-      <ul>
-       <li> <a href="#about">About</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-    </nav>
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Isabelle's Portfolio">
+  <meta property="og:image" content="assets/me.png">
+  <meta property="og:url" content="https://isabellesmyth.github.io/HTML_portfolio/">
 
-    <section id="about">
-      <h1>About</h1>
-      
-      <div class="row">
-        <div class="col-6">
-          <img src="assets/me.png" id="me" alt="Picture of Me">
-        </div>
-        <div class="col-6">
-          <p>
-            Isabelle is a senior computer science major at Boston College. She is minoring in Management and Leadership.</p>
-        </div>
-      </div>
-      
-    
-    
-      
-          <b>Isabelle Smyth</b>
+  <title>Hello!</title>
+
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li> <a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+  <br />
+  <section id="about">
+    <h1 class="animate__animated animate__fadeInLeft"> Isabelle Smyth </h1>
+    <div class="row">
+      <div class="col-6">
+        <img src="assets/me.png" id="me" alt="Picture of Me">
         <br />
-      smythi@bc.edu
-      <br />
+        <b>Isabelle Smyth</b>
+        <br />
+        smythi@bc.edu
+        <br />
+      </div>
+      <div class="col-6">
+        <p>
+          Isabelle is a senior computer science major at Boston College. She is minoring in Management and Leadership.
+        </p>
+      </div>
+    </div>
+ 
+    <div>
       <a href="https://linkedin.com/in/isabelle-smyth-088a83162
-      ">LinkedIn</a>
-      <br />
-      
-   
-    </section>
+      "><i class="fab fa-linkedin"></i></a>
+      |
+      <a href="https://github.com/isabellesmyth" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      </ul>
+    </div>
+  </section>
 
 
 
-    <section id="news">
-      <h1>News</h1>
-      <div class="row">
-        <div class="col-8">
-          <p>
-            Started her final semester of college.
-            <br />
-            Started Boston College
-            <br />
+  <section id="news">
+    <h1>News</h1>
+    <div class="row">
+      <div class="col-8">
+        <p>
+          Started her final semester of college.
+          <br />
+          Started Boston College
+          <br />
         </p>
-        </div>
-        <div class="col-4">
-          <p>
-            1/28/2020
-            <br />
-            8/24/2017
-            <br />
-        </p>
-        </div>
       </div>
+      <div class="col-4">
+        <p>
+          1/28/2020
+          <br />
+          8/24/2017
+          <br />
+        </p>
+      </div>
+    </div>
 
-    </section>
+  </section>
 
-    <section id="projects">
-      <h1>Projects</h1>
-     
-          <a href="project1.html">Roomeaze: The roommate finder app for groups and individuals</a>
-        <div class="tag">
-          <span id= "courseWork">
-          Course Work
-          </span>
-        </div>
-          
+  <section id="projects">
+    <h1>Projects</h1>
 
-        <img src = "assets/roomeazelogo.png" width="140" height="128" >
-        <br />
-        <a href="project2.html">Productivity Pods</a>
-        <div class="tag">
-          <span id="courseWork">
-            Course Work
-          </span>
-        <span id= "iOS">
-              iOS
-        </span>
-        </div>
-        <br />
-        <img src = "assets/productivity_pods.jpg" width="140" height="128" >
-        
+    <a href="project1.html">Roomeaze: The roommate finder app for groups and individuals</a>
+    <div class="tag">
+      <span id="courseWork">
+        Course Work
+      </span>
+    </div>
 
-      
-    </section>
-  </body>
+
+    <img src="assets/roomeazelogo.png" width="140" height="128">
+    <br />
+    <a href="project2.html">Productivity Pods</a>
+    <div class="tag">
+      <span id="courseWork">
+        Course Work
+      </span>
+      <span id="iOS">
+        iOS
+      </span>
+    </div>
+    <br />
+    <img src="assets/productivity_pods.jpg" width="140" height="128">
+
+
+
+  </section>
+</body>
+
 </html>
