@@ -1,0 +1,52 @@
+{
+	"about":{
+		"name":"Isabelle Smyth",
+    "title":"Student @ Boston College",
+    "email":"smythi@bc.edu",
+    "photo":"assets/me.png",
+    "github":"https://github.com/isabellesmyth",
+    "linkedin": "https://linkedin.com/in/isabelle-smyth-088a83162",
+    "description":"Isabelle is a senior computer science major at Boston College. She is minoring in Management and Leadership."
+	},
+	"news":[
+		{
+			"title": "Started first semester of college",
+			"date": "Aug 28, 2017"
+        },
+        {
+			"title": "Started final semester of college",
+			"date": "Aug 28, 2020"
+		}
+			
+	],
+	"projects":[
+		{
+            "id":"roomeaze",
+      "title": "Roomeaze: The roommate finder app for groups and individuals",
+      "authors": "Isabelle Smyth",
+      "teaser": "assets/roomeazelogo.png",
+      "tags":["coursework", "iOS"],
+      "materials": [
+        { 
+          "label": "github",
+          "path": "https://github.com/isabellesmyth/Roomeaze"
+        }
+      ],
+      "description": "I created Roomeaze to address the BC housing problem. BC housing is a very competitive process as it is entirely driven by groups needing prescise numbers. With Roomeaze, a social mobile application, groups can make profiles to find other groups or individuals to group up with."
+        },
+        {
+        "id":"productivity_pods",
+        "title": "Productivity Pods",
+        "authors": "Isabelle Smyth",
+        "teaser": "assets/productivity_pods.jpg",
+        "tags":["coursework"],
+        "materials": [
+          { 
+            "label": "website",
+            "path": "https://sites.google.com/bc.edu/productivitypods/home"
+          }
+        ],
+        "description": "In response to the University's virtual and online classes, I proposed Productivity Pods as a solution to increase the quality of learning. They help increase privacy and focus and provide individual safe spaces around campuses to engage in class and work."
+          } 
+	]
+}
