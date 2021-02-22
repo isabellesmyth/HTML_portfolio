@@ -146,13 +146,15 @@ function renderAbout(about){
   </section>`;
 }
 function renderTags(tags){
+  
   return tags.map(d=>`
-  <span id="${d}">
-        ${d}
-      </span>
-
+  <span id="${d.category}">
+    ${d.tag}
+    </span>
   `).join('');
 }
+
+
 function renderProjectItems(projects){
 	return projects.map(d=>`
 	  <div class="row">
@@ -182,11 +184,9 @@ function renderNews(news){
       ${renderNewsItems(news)}
       </div>
     ${renderNewsYears(news)}
-    
 </body>
 </section>
   `;
-  
 }
 
 function renderNewsItems(news){
@@ -196,20 +196,16 @@ function renderNewsItems(news){
     `<div class="col-4">
     ${d.title}
     </div>
-    </br >
- 
+   
     `).join('');
-    
 }
 function renderNewsYears(news){
 
-  
   return news.map(d=>
     `
     ${d.date}
     </br >
  
     `).join('');
-    
   }
 

@@ -21,11 +21,11 @@
 	],
 	"projects":[
 		{
-            "id":"roomeaze",
+      "id":"roomeaze",
       "title": "Roomeaze: The roommate finder app for groups and individuals",
       "authors": "Isabelle Smyth",
       "teaser": "assets/roomeazelogo.png",
-      "tags":["coursework", "iOS"],
+      "tags":[{"category": "coursework","tag": "course work" }, {"category": "iOS","tag": "iOS" }],
       "materials": [
         { 
           "label": "github",
@@ -39,7 +39,7 @@
         "title": "Productivity Pods",
         "authors": "Isabelle Smyth",
         "teaser": "assets/productivity_pods.jpg",
-        "tags":["coursework"],
+        "tags":[{"category": "coursework","tag": "course work" }],
         "materials": [
           { 
             "label": "website",
