@@ -1,6 +1,6 @@
 
 import MaterialIcon from './MaterialIcon.js';
-export default function Projects(projects){
+export default function renderProjects(projects){
     console.log(projects);
 	return `
   <section id="Projects">

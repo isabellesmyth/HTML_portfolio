@@ -12,7 +12,7 @@ export default function MainPage(data){
         ${About(data.about)}
         ${News(data.news)}
         ${renderProjects(data.projects)}
-        <footer>Copyright © 2019 Nam Wook Kim</footer>
+        
     `
     
     handleNewsFilter(data.news);
