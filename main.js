@@ -1,15 +1,23 @@
 
+
+
+let data = null;
 fetch('assets/data.json').then(response => {
 
   return response.json();
-}).then(data => {
-  console.log(data);
+}).then(_data => {
+  data = _data;
+  console.log(_data);
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const page = urlParams.get("project");
   console.log(page);
+  
   if (page == null){
-    renderMainPage(data); }
+    renderMainPage(data);
+    addInteractions(data); }
+    
+    
   else {
     renderProjectPage(data,page);
   }
@@ -23,9 +31,47 @@ function renderMainPage(data){
     ${renderAbout(data.about)}
     ${renderNews(data.news)}
     ${renderProjects(data.projects)}
-      
+    
+    
   `;
+ 
   
+}
+
+
+function addInteractions(data){
+  var filtered = data.projects;
+  let buttons = document.querySelectorAll('.filter input[name="filter"]');
+  buttons.forEach(cond=>cond.addEventListener('change', function(event){
+    let value = event.target.value;
+    if (value === 'all'){
+       var filtered = data.projects;
+    }
+    else { 
+      var filtered = data.projects.filter(p=>{
+      for (t in p.tags){
+        let tg = p.tags[t].tag;
+        if (value.toLowerCase() === tg.toLowerCase()){
+          return true;
+        }
+      }
+      });
+    }
+      document.querySelector('.project-list').innerHTML = renderProjectItems(filtered);
+   
+
+  }));
+  
+
+  var x = document.querySelector('.search input[name="news"]').addEventListener('input', (event)=>{
+   const keyword = event.target.value;
+   const filtered = data.news.filter(n=>{
+    return n.title.toLowerCase().includes(keyword.toLowerCase())});
+    document.querySelector('.news-list').innerHTML = renderNewsItems(filtered);
+  });
+  
+  
+
 }
 
 function renderProjectPage(data, project){
@@ -136,15 +182,36 @@ function renderAbout(about){
 
  }
  function renderProjects(projects){
+   
   return `
   <section id="Projects">
       <h1 class="title">Projects</h1>
+      
+      <div class="filter">
+      <label>
+        <input type="radio" name="filter" value="all" checked>
+        All
+      </label>
+      <label>
+        <input type="radio" name="filter" value="coursework">
+        Coursework
+      </label>
+      <label>
+      <input type="radio" name="filter" value="iOS">
+      iOS
+    </label>
+  
+    </div>
       <!-- we will add a filter interface here in the next lab -->
       <div class="project-list">
       ${renderProjectItems(projects)}
       </div>
   </section>`;
 }
+
+
+
+
 function renderTags(tags){
   
   return tags.map(d=>`
@@ -153,6 +220,7 @@ function renderTags(tags){
     </span>
   `).join('');
 }
+
 
 
 function renderProjectItems(projects){
@@ -179,33 +247,29 @@ function renderNews(news){
   return `
   <section id="News">
   <h1>News</h1>
-  <div class="row">
-    <div class="col-8">
-      ${renderNewsItems(news)}
-      </div>
-    ${renderNewsYears(news)}
-</body>
+  <div class="search">
+    <input type="search" name='news' placeholder="Search News...">
+  </div>
+  <div class="row news-list">
+      ${renderNewsItems(news.slice(0, 2))}
+     
+    </div>
+
 </section>
   `;
 }
 
 function renderNewsItems(news){
 
-  
   return news.map(d=>
-    `<div class="col-4">
+    `<div class="col-8">
     ${d.title}
     </div>
-   
+    <div class="col-4">
+    ${d.date}
+    </div>
+
     `).join('');
 }
-function renderNewsYears(news){
 
-  return news.map(d=>
-    `
-    ${d.date}
-    </br >
- 
-    `).join('');
-  }
 
