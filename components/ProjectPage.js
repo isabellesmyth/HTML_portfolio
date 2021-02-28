@@ -1,5 +1,5 @@
 
-import {Tags,ProjectMaterials} from './Projects.js';
+import {Tags,ProjectMaterials, ProjectItems} from './Projects.js';
 
 export default function ProjectPage(project){
 
@@ -24,9 +24,7 @@ export default function ProjectPage(project){
       ${ProjectMaterials(project.materials)}
       </body>
       </section>
-  `;
-    
-   
+  `;    
 }
 
 export function handleProjectFilter(data){
@@ -39,7 +37,7 @@ export function handleProjectFilter(data){
       }
       else { 
         var filtered = data.projects.filter(p=>{
-        for (t in p.tags){
+        for (var t in p.tags){
           let tg = p.tags[t].tag;
           if (value.toLowerCase() === tg.toLowerCase()){
             return true;
@@ -47,7 +45,7 @@ export function handleProjectFilter(data){
         }
         });
       }
-        document.querySelector('.project-list').innerHTML = renderProjectItems(filtered);
+        document.querySelector('.project-list').innerHTML = ProjectItems(filtered);
      
   
     }));    

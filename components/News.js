@@ -31,7 +31,7 @@ export function NewsItems(news){
 export function handleNewsFilter(news){
     var x = document.querySelector('.search input[name="news"]').addEventListener('input', (event)=>{
         const keyword = event.target.value;
-        const filtered = data.news.filter(n=>{
+        const filtered = news.filter(n=>{
          return n.title.toLowerCase().includes(keyword.toLowerCase())});
          document.querySelector('.news-list').innerHTML = NewsItems(filtered);
        });
